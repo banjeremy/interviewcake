@@ -29,33 +29,33 @@ func TestMergeRanges(t *testing.T) {
 		{
 			desc: "merges touching ranges",
 			given: []Range{
-				Range{1, 2},
-				Range{2, 3},
+				{1, 2},
+				{2, 3},
 			},
 			want: []Range{
-				Range{1, 3},
+				{1, 3},
 			},
 		},
 		{
 			desc: "merges subsumed ranges",
 			given: []Range{
-				Range{1, 5},
-				Range{2, 3},
+				{1, 5},
+				{2, 3},
 			},
 			want: []Range{
-				Range{1, 5},
+				{1, 5},
 			},
 		},
 		{
 			desc: "merges multiple subsumed ranges",
 			given: []Range{
-				Range{1, 10},
-				Range{2, 6},
-				Range{3, 5},
-				Range{7, 9},
+				{1, 10},
+				{2, 6},
+				{3, 5},
+				{7, 9},
 			},
 			want: []Range{
-				Range{1, 10},
+				{1, 10},
 			},
 		},
 	}
